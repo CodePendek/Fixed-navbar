@@ -1,9 +1,12 @@
 const darkButton = document.querySelector("#darkBtn")
 const nav = document.querySelector("nav")
+const article = document.querySelector("article")
 
 darkButton.addEventListener("click", ()=>{
   document.body.classList.toggle("bg-gray-800")
   nav.classList.toggle("bg-gray-700")
+
+  article.classList.toggle("darkArticle")
   
   const buttons = nav.querySelectorAll("button")
   for(let btn of buttons){
@@ -31,5 +34,21 @@ navLink.forEach(link =>{
 })
 
 function paging(query) {
-  console.log(query.classList[3]);
+  const h1 = document.querySelector(".text-center")
+  const link = query.classList[3]
+  switch (link) {
+    case "fa-user":
+      h1.innerText = "About"
+      break;
+    case "fa-utensils":
+      h1.innerText = "Skills"
+      break;
+    case "fa-paper-plane":
+      h1.innerText = "Contact Me"
+      break;
+  
+    default:
+      h1.innerText = "Home"
+      break;
+  }
 }

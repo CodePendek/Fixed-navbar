@@ -9,10 +9,15 @@ nav a, nav button{
 }
 
 nav button.active{
-  background-color: #19b2e1a0;
+  background-color: #edaa25;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-size: 15px !important;
 }
 
-body.bg-gray-800 button.active{
-  background-color: ;
+nav.bg-gray-700 button.active{
+  background-color: rgba(255, 255, 255, 0.108)
+}
+
+.darkArticle{
+  color: white;
 }
